@@ -1,0 +1,1 @@
+# allure-jasmin-protractor-applitools-example
