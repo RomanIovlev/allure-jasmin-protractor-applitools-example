@@ -1,0 +1,35 @@
+{
+  "name": "allure-jasmin-protractor-applitools-example",
+  "version": "1.0.0",
+  "description": "Simple Protractor example with Allure and Applitools",
+  "license": "MIT",
+  "author": "Roman Iovlev <roman.iovlev.jdi@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:RomanIovlev/allure-jasmin-protractor-applitools-example.git"
+  },
+  "scripts": {
+    "selenium": "npm-run-all selenium:update selenium:start",
+    "selenium:start": "webdriver-manager start",
+    "selenium:update": "webdriver-manager update",
+    "e2e": "npm-run-all cleanup tests report",
+    "tests": "protractor configurations/protractor.conf.js || echo 'ok'",
+    "local_report": "allure generate allure-results --clean -o allure-report || true",
+    "cleanup": "del -f allure-results",
+    "report": "allure serve allure-results"
+  },
+  "dependencies": {
+    "@types/jasmine": "^3.6.2",
+    "allure-js-commons": "^1.3.1",
+    "jasmine-allure-reporter": "^1.0.2"
+  },
+  "devDependencies": {
+    "allure-commandline": "^2.13.0",
+    "jasmine": "2.8.0",
+    "npm-run-all": "^4.1.5",
+    "protractor": "5.1.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2",
+    "string-format": "2.0.0"
+  }
+}

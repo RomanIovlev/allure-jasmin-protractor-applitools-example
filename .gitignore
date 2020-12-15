@@ -1,0 +1,10 @@
+*.iml
+npm-debug.log
+.idea/
+node_modules/
+allure-results/
+allure-report/
+package-lock.json
+*.log
+*.js
+*js.map
